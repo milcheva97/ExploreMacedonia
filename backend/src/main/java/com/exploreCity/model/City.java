@@ -11,6 +11,7 @@ import lombok.Setter;
 @Setter
 public class City implements Comparable<City> {
     String name;
+    String URI;
 
     @Override
     public int compareTo(City o) {
