@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface ListOfCitiesRepository {
 
-    List<City> city (String name);
+    List<City> cityName (String name);
 }
