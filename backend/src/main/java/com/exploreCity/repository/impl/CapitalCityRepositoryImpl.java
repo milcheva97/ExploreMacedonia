@@ -1,14 +1,16 @@
 package main.java.com.exploreCity.repository.impl;
 
 import main.java.com.exploreCity.assets.JenaAssets;
-import main.java.com.exploreCity.model.CapitalCity;
 import main.java.com.exploreCity.model.exceptions.CapitalCityNotFoundException;
 import main.java.com.exploreCity.repository.CapitalCityRepository;
-import org.apache.jena.query.*;
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.ResultSet;
 
 public class CapitalCityRepositoryImpl implements CapitalCityRepository {
     @Override
-    public void addCapitalCityInfo(String capitalCityURI, CapitalCity capitalCity) throws CapitalCityNotFoundException {
+    public void addCapitalCityInfo(String capitalCityURI) throws CapitalCityNotFoundException {
         String queryCapitalCityInfo =
                 "prefix dbp: <http://dbpedia.org/property/> " +
                 "prefix dbo: <http://dbpedia.org/ontology/> " +
